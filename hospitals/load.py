@@ -9,6 +9,7 @@ hospital_mapping = {
     "facility_type": "Facility_t",
     "ward": "Ward",
     "ownership": "Ownership",
+    "lga": "Lga",
     "lon": "Long",
     "lat": "Lat",
     "geom": "POINT",

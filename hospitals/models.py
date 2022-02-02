@@ -3,7 +3,7 @@ from django.utils.translation import gettext_lazy as _
 
 
 class Hospital(models.Model):
-    facility_name = models.CharField(_("Hospital Name"), max_length=100)
+    facility_name = models.CharField(_("Hospital Name"), max_length=500)
     facility_type = models.CharField(_("Hospital Type"), max_length=100)
     ward = models.CharField(_("Ward"), max_length=100)
     ownership = models.CharField(_("Ownership"), max_length=100)

@@ -19,3 +19,7 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+
+admin.site.site_header = "Nearest Medical Center Admin"
+admin.site.site_title = "Nigeria GIS Nearest Medical Center Admin Portal"
+admin.site.index_title = "Welcome to Nigeria GIS Medical Center"

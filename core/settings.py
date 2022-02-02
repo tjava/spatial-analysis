@@ -48,6 +48,7 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS=[
     'rest_framework',
     # 'rest_framework_gis',
+    'leaflet'
 ]
 
 PROJECT_APP = [
@@ -140,3 +141,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LEAFLET_CONFIG = {
+    "DEFAULT_CENTER": (9.072264, 7.491302),
+    "DEFAULT_ZOOM": 8,
+    "MAX_ZOOM": 20,
+    "MIN_ZOOM": 3,
+    "SCALE": "both",
+    "ATTRIBUTION_PREFIX": "Nearest Medical Center API",
+}
