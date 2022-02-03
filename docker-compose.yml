@@ -8,8 +8,8 @@ services:
       command: python3 manage.py runserver 0.0.0.0:8000
       volumes:
          - .:/app
-      ports:
-         - 8000:8000
+      # ports:
+      #    - 8000:8000
       env_file:
          - .env
       restart: "on-failure"
@@ -32,17 +32,17 @@ services:
       networks:
          - spatial_analysis_api
 
-   # nginx:
-   #    restart: always
-   #    depends_on:
-   #       - api
-   #    build:
-   #       context: ./nginx
-   #       dockerfile: Dockerfile.dev
-   #    ports:
-   #       - 8080:80
-   #    networks:
-   #       - hospital-api
+   nginx:
+      restart: always
+      depends_on:
+         - api
+      build:
+         context: ./nginx
+         dockerfile: Dockerfile.dev
+      ports:
+         - 8080:80
+      networks:
+         - spatial_analysis_api
 
 networks:
    spatial_analysis_api:
