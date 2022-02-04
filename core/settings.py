@@ -48,7 +48,8 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS=[
     'rest_framework',
     # 'rest_framework_gis',
-    'leaflet'
+    'leaflet',
+    "django_filters",
 ]
 
 PROJECT_APP = [
