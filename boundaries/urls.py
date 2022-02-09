@@ -4,8 +4,6 @@ from .views import BoundaryViewset
 
 router = DefaultRouter()
 
-router.register(
-    prefix="api/v1/boundaries", viewset=BoundaryViewset, basename="boundary"
-)
+router.register(prefix="api/v1/boundaries", viewset=BoundaryViewset, basename="boundary")
 
 urlpatterns = router.urls

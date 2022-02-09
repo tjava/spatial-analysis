@@ -5,7 +5,7 @@ from .models import Boundary
 from .serializers import BoundarySerializer
 
 
-class BoundaryViewset(viewsets.ModelViewSet):
+class BoundaryViewset(viewsets.ReadOnlyModelViewSet):
     queryset = Boundary.objects.all()
     serializer_class = BoundarySerializer
 

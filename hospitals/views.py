@@ -11,7 +11,7 @@ from .models import Hospital
 from .serializers import HospitalSerializer
 
 
-class HospitalViewSet(viewsets.ModelViewSet):
+class HospitalViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Hospital.objects.all()
     serializer_class = HospitalSerializer
     filter_class = HospitalsFilter
