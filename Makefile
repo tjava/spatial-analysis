@@ -28,3 +28,9 @@ volume:
 
 shell:
 	docker-compose exec api python3 manage.py shell
+
+test:
+	docker-compose exec api pytest -p no:warnings --cov=.
+
+test-html:
+	docker-compose exec api pytest -p no:warnings --cov=. --cov-report html
